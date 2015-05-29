@@ -1,4 +1,6 @@
-var rsvpApp = angular.module('rsvpApp', ['ngRoute', 'ngAnimate']);
+'use strict';
+
+var rsvpApp = angular.module('rsvpApp', ['ngRoute', 'ngAnimate', 'rsvpApp.controllers']);
 
 rsvpApp.config(function($routeProvider) {
   $routeProvider

@@ -1,30 +1,31 @@
-rsvpApp.controller('RsvpController', ['$scope' , function($scope) {
+// var rsvpApp = angular.module('rsvpApp', ['ngRoute', 'ngAnimate']);
+// rsvpApp.controller('RsvpController', ['$scope' , function($scope) {
 
-  $scope.guestList = [];
-
-
-  // Total Guests on list
-  $scope.getTotalGuests = function() {
-    return $scope.guestList.length;
-  };
+//   $scope.guestList = [];
 
 
-//   // Add Guest to list
-//   $scope.addGuest = function() {
-//     $scope.guestList.push()
-
-//     // var guest = {
-
-//     // }
+//   // Total Guests on list
+//   $scope.getTotalGuests = function() {
+//     return $scope.guestList.length;
 //   };
 
 
+// //   // Add Guest to list
+// //   $scope.addGuest = function() {
+// //     $scope.guestList.push()
+
+// //     // var guest = {
+
+// //     // }
+// //   };
 
 
 
+
+
+// // }]);
+
+// // rsvpApp.service('guestService', function () {
+// //   this.name = 
+// // })
 // }]);
-
-// rsvpApp.service('guestService', function () {
-//   this.name = 
-// })
-}]);
