@@ -1,10 +1,8 @@
-'use strict';
-
 var rsvpApp = angular.module('rsvpApp', ['ngRoute', 'ngAnimate']);
 
 rsvpApp.config(function($routeProvider) {
   $routeProvider
-    .when('/', {
+    .when('/#', {
       controller: 'RsvpController',
       templateUrl: 'index.html'
     })
