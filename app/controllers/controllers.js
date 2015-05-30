@@ -1,12 +1,10 @@
-'use strict';
-
 // Controllers
 
-angular.module('rsvpApp.controllers', [])
-  .controller('LandingPageController', ['$scope', function ($scope) {
+// angular.module('rsvpApp', ['ngRoute', 'ngAnimate'])
+  // .controller('LandingPageController', ['$scope', function ($scope) {
 
-  }])
-
+  // }])
+rsvpApp
   .controller('ChampController', ['$scope', function ($scope) {
     $scope.name = "Champ";
     $scope.favoriteTurtle = "Leonardo";
