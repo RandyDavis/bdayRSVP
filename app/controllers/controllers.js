@@ -84,7 +84,7 @@ rsvpApp
       $scope.guestList.on('value', function(snapshot) {
         $scope.rsvpdGuests = snapshot.val();
       });
-    });
+    }, 0);
 
     // Total Guests on list
     // $scope.getTotalGuests = function() {

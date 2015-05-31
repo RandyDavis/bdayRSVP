@@ -1,0 +1,119 @@
+/********************************************
+                APP STYLES
+*********************************************/
+body {
+  font-family: 'Poiret One', cursive;
+  background-color: black;
+  color: #FFF;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.canda {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.well {
+  background-color: rgba(203, 203, 203, 0.2);
+}
+
+
+.well-content {
+  color: #FFF;
+  font-size: 200%;
+}
+
+
+
+
+
+/********************************************
+                LANDING STYLES
+*********************************************/
+#landing {
+  background: url("../../images/landing-TMNT.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  min-height: 1400px;
+}
+
+#landing h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 350%;
+  text-shadow: 2px -2px 8px red;
+}
+
+#landing h2 {
+  text-shadow: 2px -2px 8px blue;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/********************************************
+                CHAMP STYLES
+*********************************************/
+#champ {
+  background: url("../../images/Champ_Leo.jpg") no-repeat center center;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  min-height: 1400px;
+}
+
+
+
+
+
+
+/********************************************
+                ATLAS STYLES
+*********************************************/
+#atlas {
+  background: url("../../images/Atlas_Raph.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  min-height: 1400px;
+}
+
+
+
+
+
+
+
+
+
+/********************************************
+                RSVP STYLES
+*********************************************/
+#rsvp {
+  background: url("../../images/rsvp-Raphael-Leonardo-TMNT-2014.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  min-height: 1400px;
+}
+
+#info table th{
+  color: #FFF;
+}
+table th{
+  color: #000;
+}
+
+
