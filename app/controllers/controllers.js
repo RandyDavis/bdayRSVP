@@ -61,32 +61,33 @@ rsvpApp
     ];
   }])
 
-  .controller('RsvpController', ['$scope', function ($scope) {
-    $scope.guestList = [];
+  .controller('RsvpController', ['$scope', '$timeout', '$firebaseArray', function ($scope, $timeout, $firebaseArray) {
+    $scope.name = "";
+    $scope.guestOf = "";
+    $scope.faveTurtle = ['Leonardo', 'Raphael', 'Donatello', 'Michaelangelo'];
+    $scope.rsvpdGuests = {};
+    // $scope.rsvpDate = (function() {
+    //   new Date();
+    // })();
 
+    $scope.guestList = new Firebase("");
+    // $scope.guestList = $firebaseArray(ref);
 
-  // Total Guests on list
-  $scope.getTotalGuests = function() {
-    return $scope.guestList.length;
-  };
+    $scope.addGuest = function() {
+      $scope.guestList.push({name: $scope.name, guestOf: $scope.guestOf, faveTurtle: $scope.faveTurtle });
+      $scope.name = "";
+      $scope.faveTurtle = "";
+      $scope.guestOf = "";
+    };
 
+    $timeout (function() {
+      $scope.guestList.on('value', function(snapshot) {
+        $scope.rsvpdGuests = snapshot.val();
+      });
+    });
 
-//   // Add Guest to list
-//   $scope.addGuest = function() {
-//     $scope.guestList.push()
-
-//     // var guest = {
-
-//     // }
-//   };
-
-
-
-
-
-// }]);
-
-// rsvpApp.service('guestService', function () {
-//   this.name = 
-// })
+    // Total Guests on list
+    // $scope.getTotalGuests = function() {
+    //   return $scope.guestList.length;
+    // };
   }]);

@@ -1,4 +1,4 @@
-var rsvpApp = angular.module('rsvpApp', ['ngRoute', 'ngAnimate']);
+var rsvpApp = angular.module('rsvpApp', ['ngRoute', 'ngAnimate', 'firebase']);
 
 rsvpApp.config(function($routeProvider) {
   $routeProvider
