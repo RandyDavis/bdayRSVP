@@ -10,26 +10,38 @@ rsvpApp
     $scope.favoriteTurtle = "Leonardo";
     $scope.ageTurning = 4;
     $scope.hobbies = [
-      "running",
-      "riding my bike",
-      "jumping on the trampoline",
-      "playing with my 'Buddy', aka Atlas",
-      "sleeping pallets with mommy and daddy",
-      "wrestling with daddy"
+      "Running",
+      "Riding his bike",
+      "Jumping on the trampoline",
+      "Playing with my 'Buddy', aka Atlas",
+      "Sleeping pallets with mommy and daddy",
+      "Wrestling with daddy"
     ];
 
-    $scope.clothing = {
-      shirtSize: "4T",
-      pantsSize: "4T",
-      shortsSize: "4T",
-      shoeSize: "9C"
-    };
+    $scope.clothing = [
+      {
+        name: "Shirt Size",
+        size: "4T"
+      },
+      {
+        name: "Pants Size",
+        size: "4T"
+      },
+      {
+        name: "Shorts Size",
+        size: "4T"
+      },
+      {
+        name: "Shoe Size",
+        size: "9C"
+      }
+    ];
     
     $scope.giftIdeas = [
-      "toys",
-      "books",
-      "anything Ninja Turtle related",
-      "swimming pool toys"
+      "Toys",
+      "Books",
+      "Anything Ninja Turtle related",
+      "Swimming pool toys"
     ];
   }])
 
@@ -38,28 +50,43 @@ rsvpApp
     $scope.favoriteTurtle = "Raphael";
     $scope.ageTurning = 2;
     $scope.hobbies = [
-      "running",
-      "riding his scuttlebug",
-      "jumping on the trampoline",
-      "hitting Champ when nobody is looking",
-      "sleeping pallets with mommy and daddy",
-      "randomly letting out high pitched screams"
+      "Running",
+      "Riding his scuttlebug",
+      "Jumping on the trampoline",
+      "Hitting Champ when nobody is looking",
+      "Sleeping pallets with mommy and daddy",
+      "Randomly letting out high pitched screams"
     ];
 
-    $scope.clothing = {
-      shirtSize: "2T",
-      pantsSize: "2T",
-      shortsSize: "2T",
-      shoeSize: "7C"
-    };
+    $scope.clothing = [
+      {
+        name: "Shirt Size",
+        size: "2T"
+      },
+      {
+        name: "Pants Size",
+        size: "2T"
+      },
+      {
+        name: "Shorts Size",
+        size: "2T"
+      },
+      {
+        name: "Shoe Size",
+        size: "7C"
+      }
+    ];
     
     $scope.giftIdeas = [
-      "toys",
-      "books",
-      "puzzles",
-      "bathtub toys"
+      "Toys",
+      "Books",
+      "Puzzles",
+      "Bathtub toys"
     ];
   }])
+
+
+
 
   .controller('RsvpController', ['$scope', '$timeout', '$firebaseArray', function ($scope, $timeout, $firebaseArray) {
     $scope.name = "";
@@ -80,11 +107,44 @@ rsvpApp
       $scope.guestOf = "";
     };
 
-    $timeout (function() {
-      $scope.guestList.on('value', function(snapshot) {
+
+    $scope.guestList.on('value', function(snapshot) {
+      $scope.$apply(function() {
         $scope.rsvpdGuests = snapshot.val();
       });
-    }, 0);
+    });
+
+    // Total Guests on list
+    // $scope.getTotalGuests = function() {
+    //   return $scope.guestList.length;
+    // };
+  }])
+
+  .controller('TestController', ['$scope', '$timeout', '$firebaseArray', function ($scope, $timeout, $firebaseArray) {
+    $scope.name = "";
+    $scope.guestOf = "";
+    $scope.faveTurtle = ['Leonardo', 'Raphael', 'Donatello', 'Michaelangelo'];
+    $scope.rsvpdGuests = {};
+    // $scope.rsvpDate = (function() {
+    //   new Date();
+    // })();
+
+    $scope.guestList = new Firebase("");
+    // $scope.guestList = $firebaseArray(ref);
+
+    $scope.addGuest = function() {
+      $scope.guestList.push({name: $scope.name, guestOf: $scope.guestOf, faveTurtle: $scope.faveTurtle });
+      $scope.name = "";
+      $scope.faveTurtle = "";
+      $scope.guestOf = "";
+    };
+
+
+    $scope.guestList.on('value', function(snapshot) {
+      $scope.$apply(function() {
+        $scope.rsvpdGuests = snapshot.val();
+      });
+    });
 
     // Total Guests on list
     // $scope.getTotalGuests = function() {

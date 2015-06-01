@@ -4,32 +4,58 @@
     <link href='http://fonts.googleapis.com/css?family=Poiret+One|Cinzel+Decorative:400,700' rel='stylesheet' type='text/css'>
     <title>Champ and Atlas Birthday - RSVP</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css">
+
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
     <link href="styles/animations.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-inverse">
-            <ul class="nav navbar-nav">
-                <li><a href="#/">Home</a></li>
-                <li><a href="#/rsvp">RSVP</a></li>
-                <li><a href="#/champ">Champ</a></li>
-                <li><a href="#/atlas">Atlas</a></li>
-            </ul>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#/">Home</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#/rsvp">RSVP <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#/champ">Champ</a></li>
+                    <li><a href="#/atlas">Atlas</a></li>
+                    <li><a href="#/contact">Contact</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
         </nav>
     </header>
     
     <main>
         <div ng-view class="slide-animation"></div>
     </main>
+
+    <footer>
+        <div class="text-center">
+            Made with <span id="heart" class="glyphicon glyphicon-heart"></span> for my boys - DevRandy - 2015 &copy;
+        </div>
+    </footer>
     
     <script src="scripts/angular.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="scripts/angular-animate.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/controllers.js"></script>
+    
     <!-- <script src="app/controllers/rsvpController.js"></script>
     <script src="app/controllers/champController.js"></script>
     <script src="app/controllers/atlasController.js"></script> -->

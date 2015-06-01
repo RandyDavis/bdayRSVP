@@ -1,12 +1,25 @@
 <div id="atlas">
-  <div class="container">
+  <div class="container" ng-controller="AtlasController">
+    
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-        <h1 class="canda">Atlas is turning 2</h1>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h1 class="canda text-center heading-space-bottom">{{ name }} is Turning {{ ageTurning }}</h1>
         <div class="well well-content">
-          content about Atlas
+          <h2>The Legend of {{ name }},</h2>
+          <p>{{ name }} also recently became a huge Teenage Mutant Ninja Turtles fan, mainly due to Chammp.  His favorite turtle is {{ favoriteTurtle }} and since he's not that good at pretending he's him yet, he just likes to run around jumping while Champ is pretending to be Leonardo.  Here is a little bit about {{ name }} and what he likes to do:</p>
+          <ul>
+            <li ng-repeat="hobby in hobbies">{{ hobby }}</li>
+          </ul>
+          <p>Likewise with Champ, here are some helpful gift ideas but don't feel obligated to get anything or even stick to this list as we would most enjoy your company for this occassion:</p>
+          Clothing:
+          <ul ng-repeat="item in clothing">
+            <li>{{ item.name }} - {{ item.size }}</li>
+          </ul>
+          Toys & Etc.:
+          <ul>
+            <li ng-repeat="gift in giftIdeas">{{ gift }}</li>
+          </ul>
         </div>
-        
         
       </div>
     </div>

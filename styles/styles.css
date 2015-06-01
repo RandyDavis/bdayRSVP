@@ -3,12 +3,33 @@
 *********************************************/
 body {
   font-family: 'Poiret One', cursive;
+  font-size: 1.85em;
   background-color: black;
   color: #FFF;
 }
 
 .navbar {
   margin-bottom: 0;
+  font-size: 150%;
+  /*height: 70px;*/
+}
+
+.navbar-brand {
+  font-size: 100%;
+  padding-top: 25px;
+}
+
+.navbar-brand li a {
+  color: #aa1ed5;
+
+}
+
+.navbar li a {
+  padding-top: 25px;
+}
+
+main {
+  margin-top: 50px;
 }
 
 .canda {
@@ -25,9 +46,27 @@ body {
   font-size: 200%;
 }
 
+.heading-space-bottom {
+  padding-bottom: 20px;
+}
 
+#heart {
+  color: red;
+}
 
+/******Validation***********/
+/*input.ng-invalid {
+  background-color: lightpink; 
+}
 
+input.ng-valid {
+  background-color: lightgreen;
+}
+
+span.error {
+  color: red;
+  font-weight: bold;
+}*/
 
 /********************************************
                 LANDING STYLES
@@ -44,12 +83,17 @@ body {
 #landing h1 {
   font-family: 'Cinzel Decorative', cursive;
   font-size: 350%;
-  text-shadow: 2px -2px 8px red;
+  text-shadow: 2px -2px 8px #f94e0a;
 }
 
 #landing h2 {
+  font-size: 300%;
   text-shadow: 2px -2px 8px blue;
   padding-top: 20px;
+}
+
+a:hover, a:focus {
+  color: #FFF;
 }
 
 
@@ -69,6 +113,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
+  text-shadow: 2px -2px 8px blue;
+  padding-top: 20px;
   min-height: 1400px;
 }
 
@@ -86,6 +132,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
+  text-shadow: 2px -2px 8px red;
+  padding-top: 20px;
   min-height: 1400px;
 }
 
@@ -109,11 +157,57 @@ body {
   min-height: 1400px;
 }
 
+#rsvp h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-shadow: 2px -2px 8px blue;
+}
+#info {
+  text-shadow: 2px -2px 8px red;
+}
+
+.rsvp {
+  text-shadow: 2px -2px 8px red;
+}
+
+.list {
+  text-shadow: 2px -2px 8px blue;
+}
+
 #info table th{
   color: #FFF;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
 }
+
+#info table th, td {
+  width: 33%;
+}
+
+.rsvpLabel {
+  width: 32.666667%;
+  /*text-align: right;*/
+}
+
+.form-control {
+  width: 100%;
+  margin-right: 0;
+  display: inline-block;
+}
+
+table tr th {
+  color: #FFF;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+}
+
 table th{
   color: #000;
+}
+
+table .table-hover {
+  color: #000;
+  background-color: transparent;
 }
 
 

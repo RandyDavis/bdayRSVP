@@ -21,5 +21,15 @@ rsvpApp.config(function($routeProvider) {
       controller: 'RsvpController',
       templateUrl: 'app/views/rsvp.html'
     })
+
+    .when('/contact', {
+      templateUrl: 'app/views/contact.html'
+    })
+
+    .when('/test', {
+      controller: 'TestController',
+      templateUrl: 'app/views/test.html'
+    })
+
     .otherwise({ redirectTo: '/' });
 });
