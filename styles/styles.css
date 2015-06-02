@@ -68,6 +68,14 @@ span.error {
   font-weight: bold;
 }*/
 
+
+footer {
+  height: 60px;
+}
+
+footer p {
+  padding-top: 10px;
+}
 /********************************************
                 LANDING STYLES
 *********************************************/
