@@ -1,0 +1,9 @@
+{
+  "firebase": "champandatlasrsvp",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
