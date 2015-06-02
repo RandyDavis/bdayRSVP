@@ -92,6 +92,24 @@ rsvpApp
     $scope.name = "";
     $scope.guestOf = "";
     $scope.faveTurtle = ['Leonardo', 'Raphael', 'Donatello', 'Michaelangelo'];
+    // $scope.faveTurtle = [
+    //   {
+    //     turleID: 1,
+    //     turtleName: 'Leonardo'
+    //   },
+    //   {
+    //     turleID: 2,
+    //     turtleName: 'Raphael'
+    //   },
+    //   {
+    //     turleID: 3,
+    //     turtleName: 'Donatello'
+    //   },
+    //   {
+    //     turleID: 4,
+    //     turtleName: 'Michelangelo'
+    //   }
+    // ];
     $scope.rsvpdGuests = {};
     // $scope.rsvpDate = (function() {
     //   new Date();
@@ -107,12 +125,16 @@ rsvpApp
       $scope.guestOf = "";
     };
 
-    $timeout(function() {
+    // $timeout(function() {
       $scope.guestList.on('value', function(snapshot) {
+        $scope.$apply(function() {
           $scope.rsvpdGuests = snapshot.val();
+        });
       });
       
-    }, 500);
+    // }, 500);
+
+
 
     // Total Guests on list
     // $scope.getTotalGuests = function() {
@@ -128,24 +150,24 @@ rsvpApp
     $scope.name = "";
     $scope.guestOf = "";
     // $scope.faveTurtle = ['Leonardo', 'Raphael', 'Donatello', 'Michaelangelo'];
-    $scope.faveTurtle = [
-      {
-        turleID: 1,
-        turtleName: 'Leonardo'
-      },
-      {
-        turleID: 2,
-        turtleName: 'Raphael'
-      },
-      {
-        turleID: 3,
-        turtleName: 'Donatello'
-      },
-      {
-        turleID: 4,
-        turtleName: 'Michelangelo'
-      }
-    ];
+    // $scope.faveTurtle = [
+    //   {
+    //     turleID: 1,
+    //     turtleName: 'Leonardo'
+    //   },
+    //   {
+    //     turleID: 2,
+    //     turtleName: 'Raphael'
+    //   },
+    //   {
+    //     turleID: 3,
+    //     turtleName: 'Donatello'
+    //   },
+    //   {
+    //     turleID: 4,
+    //     turtleName: 'Michelangelo'
+    //   }
+    // ];
     $scope.rsvpdGuests = {};
     // $scope.rsvpDate = (function() {
     //   new Date();

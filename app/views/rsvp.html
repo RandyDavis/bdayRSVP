@@ -41,10 +41,16 @@
             <!-- Select a favorite turtle -->
             <label class="rsvpLabel" for="faveTurtle" class="col-sm-2 control-label">Favorite Ninja Turtle:</label>
             <div class="col-sm-12">
-              
-              <select class="form-control" ng-model="faveTurtle">
-                <option ng-repeat="turtle in faveTurtle track by $index" value="{{ turtle }}" >{{ turtle }}</option>
+              <select class="form-control" name="favTurt" ng-model="faveTurtle">
+                <option value="" selected>Select One</option>
+                <option value="Leonardo">Leonardo</option>
+                <option value="Raphael">Raphael</option>
+                <option value="Donatello">Donatello</option>
+                <option value="Michelangelo">Michelangelo</option>
               </select>
+              <!-- <select class="form-control" ng-model="faveTurtle">
+                <option ng-repeat="turtle in faveTurtle track by $index" value="{{ turtle }}" >{{ turtle }}</option>
+              </select> -->
             </div>
           </div>
           <div class="form-group text-center">
