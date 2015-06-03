@@ -55,23 +55,29 @@ main {
 }
 
 /******Validation***********/
-/*input.ng-invalid {
+form .ng-invalid.ng-dirty {
   background-color: lightpink; 
 }
 
-input.ng-valid {
+form .ng-valid.ng-dirty {
   background-color: lightgreen;
 }
 
-span.error {
+div.error {
   color: red;
   font-weight: bold;
-}*/
+}
 
 
 footer {
   height: 60px;
 }
+
+/*.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}*/
 
 footer p {
   padding-top: 10px;
@@ -80,7 +86,7 @@ footer p {
                 LANDING STYLES
 *********************************************/
 #landing {
-  background: url("../../images/landing-TMNT.jpg") no-repeat 50% 50%;
+  background: url("../../images/landing-TMNT.jpg") no-repeat 10% 10% fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -116,7 +122,7 @@ a:hover, a:focus {
                 CHAMP STYLES
 *********************************************/
 #champ {
-  background: url("../../images/Champ_Leo.jpg") no-repeat center center;
+  background: url("../../images/Champ_Leo_lg.jpeg") no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -135,7 +141,7 @@ a:hover, a:focus {
                 ATLAS STYLES
 *********************************************/
 #atlas {
-  background: url("../../images/Atlas_Raph.jpg") no-repeat 50% 50%;
+  background: url("../../images/Atlas_Raph_lg.jpg") no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -157,12 +163,13 @@ a:hover, a:focus {
                 RSVP STYLES
 *********************************************/
 #rsvp {
-  background: url("../../images/rsvp-Raphael-Leonardo-TMNT-2014.jpg") no-repeat 50% 50%;
+  background: url("../../images/rsvp-Raphael-Leonardo-TMNT-2014_lg.jpg") no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   min-height: 1400px;
+  font-size: 1.2em;
 }
 
 #rsvp h1 {
@@ -217,5 +224,578 @@ table .table-hover {
   color: #000;
   background-color: transparent;
 }
+
+/********************************************
+                CONTACT STYLES
+*********************************************/
+#contact {
+  background: url("../../images/TMNT_2014_Wallpaper_HD_lg.jpg") no-repeat 10% 10% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  min-height: 1460px;
+  padding-top: 20px;
+  text-shadow: 2px -2px 8px #f94e0a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************
+                MEDIA QUERY STYLES
+*********************************************/
+/* Small devices - tablets, 768px and up */
+@media (max-width: 600px) {
+  /********************************************
+                  APP STYLES
+  *********************************************/
+  body {
+    font-family: 'Poiret One', cursive;
+    font-size: .75em;
+    background-color: black;
+    color: #FFF;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    font-size: 150%;
+    /*height: 70px;*/
+  }
+
+  .navbar-brand {
+    font-size: 100%;
+    padding-top: 25px;
+  }
+
+  .navbar-brand li a {
+    color: #aa1ed5;
+
+  }
+
+  .navbar li a {
+    padding-top: 25px;
+  }
+
+  main {
+    margin-top: 50px;
+  }
+
+  .canda {
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .well {
+    background-color: rgba(203, 203, 203, 0.2);
+  }
+
+
+  .well-content {
+    color: #FFF;
+    font-size: 200%;
+  }
+
+  .heading-space-bottom {
+    padding-bottom: 20px;
+  }
+
+  #heart {
+    color: red;
+  }
+
+  /******Validation***********/
+  /*input.ng-invalid {
+    background-color: lightpink; 
+  }
+
+  input.ng-valid {
+    background-color: lightgreen;
+  }
+
+  span.error {
+    color: red;
+    font-weight: bold;
+  }*/
+
+
+  footer {
+    height: 60px;
+  }
+
+  /*.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }*/
+
+  footer p {
+    padding-top: 10px;
+  }
+  /********************************************
+                  LANDING STYLES
+  *********************************************/
+  #landing {
+    background: url("../../images/landing-TMNT.jpg") no-repeat 10% 10% fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 1400px;
+    font-size: 1.5em;
+  }
+
+  #landing h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 350%;
+    text-shadow: 2px -2px 8px #f94e0a;
+    padding-top: 20px;
+  }
+
+  #landing h2 {
+    font-size: 300%;
+    text-shadow: 2px -2px 8px blue;
+    padding-top: 20px;
+  }
+
+  a:hover, a:focus {
+    color: #FFF;
+  }
+
+
+
+
+
+
+
+
+
+  /********************************************
+                  CHAMP STYLES
+  *********************************************/
+  #champ {
+    background: url("../../images/champ-solo.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    text-shadow: 2px -2px 8px blue;
+    padding-top: 20px;
+    min-height: 1200px;
+    font-size: 1em;
+  }
+
+
+
+
+
+
+  /********************************************
+                  ATLAS STYLES
+  *********************************************/
+  #atlas {
+    background: url("../../images/Atlas_solo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    text-shadow: 2px -2px 8px red;
+    padding-top: 20px;
+    min-height: 1200px;
+    font-size: 1.2em;
+  }
+
+
+
+
+
+
+
+
+
+  /********************************************
+                  RSVP STYLES
+  *********************************************/
+  #rsvp {
+    background: url("../../images/rsvp-Raphael-Leonardo-TMNT-2014.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 1400px;
+    font-size: 1.2em;
+  }
+
+  #rsvp h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 2px -2px 8px blue;
+  }
+  #info {
+    text-shadow: 2px -2px 8px red;
+  }
+
+  .rsvp {
+    text-shadow: 2px -2px 8px red;
+  }
+
+  .list {
+    text-shadow: 2px -2px 8px blue;
+  }
+
+  #info table th{
+    color: #FFF;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+  }
+
+  #info table th, td {
+    width: 33%;
+  }
+
+  .rsvpLabel {
+    width: 32.666667%;
+    /*text-align: right;*/
+  }
+
+  .form-control {
+    width: 100%;
+    margin-right: 0;
+    display: inline-block;
+  }
+
+  table tr th {
+    color: #FFF;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+  }
+
+  table th{
+    color: #000;
+  }
+
+  table .table-hover {
+    color: #000;
+    background-color: transparent;
+  }
+
+  /********************************************
+                  CONTACT STYLES
+  *********************************************/
+  #contact {
+  background: url("../../images/TMNT_2014_Wallpaper_HD_lg.jpg") no-repeat 10% 10% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  min-height: 1460px;
+  padding-top: 20px;
+  text-shadow: 2px -2px 8px #f94e0a;
+  font-size: 1.4em;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* Medium devices - desktops, 992px and up */
+@media (min-width: @screen-sm-min) {
+  @media (max-width: 600px) {
+  /********************************************
+                  APP STYLES
+  *********************************************/
+  body {
+    font-family: 'Poiret One', cursive;
+    font-size: .75em;
+    background-color: black;
+    color: #FFF;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    font-size: 150%;
+    /*height: 70px;*/
+  }
+
+  .navbar-brand {
+    font-size: 100%;
+    padding-top: 25px;
+  }
+
+  .navbar-brand li a {
+    color: #aa1ed5;
+
+  }
+
+  .navbar li a {
+    padding-top: 25px;
+  }
+
+  main {
+    margin-top: 50px;
+  }
+
+  .canda {
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .well {
+    background-color: rgba(203, 203, 203, 0.2);
+  }
+
+
+  .well-content {
+    color: #FFF;
+    font-size: 200%;
+  }
+
+  .heading-space-bottom {
+    padding-bottom: 20px;
+  }
+
+  #heart {
+    color: red;
+  }
+
+  /******Validation***********/
+  /*input.ng-invalid {
+    background-color: lightpink; 
+  }
+
+  input.ng-valid {
+    background-color: lightgreen;
+  }
+
+  span.error {
+    color: red;
+    font-weight: bold;
+  }*/
+
+
+  footer {
+    height: 60px;
+  }
+
+  /*.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }*/
+
+  footer p {
+    padding-top: 10px;
+  }
+  /********************************************
+                  LANDING STYLES
+  *********************************************/
+  #landing {
+    background: url("../../images/landing-TMNT.jpg") no-repeat 30% 30% fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 1400px;
+  }
+
+  #landing h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 350%;
+    text-shadow: 2px -2px 8px #f94e0a;
+  }
+
+  #landing h2 {
+    font-size: 300%;
+    text-shadow: 2px -2px 8px blue;
+    padding-top: 20px;
+  }
+
+  a:hover, a:focus {
+    color: #FFF;
+  }
+
+
+
+
+
+
+
+
+
+  /********************************************
+                  CHAMP STYLES
+  *********************************************/
+  #champ {
+    background: url("../../images/Champ_Leo_md.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    text-shadow: 2px -2px 8px blue;
+    padding-top: 20px;
+    min-height: 1400px;
+  }
+
+
+
+
+
+
+  /********************************************
+                  ATLAS STYLES
+  *********************************************/
+  #atlas {
+    background: url("../../images/Atlas_solo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    text-shadow: 2px -2px 8px red;
+    padding-top: 20px;
+    min-height: 1400px;
+  }
+
+
+
+
+
+
+
+
+
+  /********************************************
+                  RSVP STYLES
+  *********************************************/
+  #rsvp {
+    background: url("../../images/rsvp-Raphael-Leonardo-TMNT-2014.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 1400px;
+  }
+
+  #rsvp h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 2px -2px 8px blue;
+  }
+  #info {
+    text-shadow: 2px -2px 8px red;
+  }
+
+  .rsvp {
+    text-shadow: 2px -2px 8px red;
+  }
+
+  .list {
+    text-shadow: 2px -2px 8px blue;
+  }
+
+  #info table th{
+    color: #FFF;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+  }
+
+  #info table th, td {
+    width: 33%;
+  }
+
+  .rsvpLabel {
+    width: 32.666667%;
+    /*text-align: right;*/
+  }
+
+  .form-control {
+    width: 100%;
+    margin-right: 0;
+    display: inline-block;
+  }
+
+  table tr th {
+    color: #FFF;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+  }
+
+  table th{
+    color: #000;
+  }
+
+  table .table-hover {
+    color: #000;
+    background-color: transparent;
+  }
+
+  /********************************************
+                  CONTACT STYLES
+  *********************************************/
+  #contact {
+    min-height: 1160px;
+    padding-top: 20px;
+  }
+
+
+
+
+
+}
+  
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large devices - large desktops, 1200px and up */
+@media (min-width: @screen-lg-min) {
+
+
+
+
+
+
+}
+
 
 

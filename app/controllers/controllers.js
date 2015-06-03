@@ -13,7 +13,7 @@ rsvpApp
       "Running",
       "Riding his bike",
       "Jumping on the trampoline",
-      "Playing with my 'Buddy', aka Atlas",
+      "Playing with his 'Buddy', aka Atlas",
       "Sleeping pallets with mommy and daddy",
       "Wrestling with daddy"
     ];
@@ -135,60 +135,6 @@ rsvpApp
     // }, 500);
 
 
-
-    // Total Guests on list
-    // $scope.getTotalGuests = function() {
-    //   return $scope.guestList.length;
-    // };
-  }])
-
-
-
-
-
-  .controller('TestController', ['$scope', '$timeout', '$firebaseArray', function ($scope, $timeout, $firebaseArray) {
-    $scope.name = "";
-    $scope.guestOf = "";
-    // $scope.faveTurtle = ['Leonardo', 'Raphael', 'Donatello', 'Michaelangelo'];
-    // $scope.faveTurtle = [
-    //   {
-    //     turleID: 1,
-    //     turtleName: 'Leonardo'
-    //   },
-    //   {
-    //     turleID: 2,
-    //     turtleName: 'Raphael'
-    //   },
-    //   {
-    //     turleID: 3,
-    //     turtleName: 'Donatello'
-    //   },
-    //   {
-    //     turleID: 4,
-    //     turtleName: 'Michelangelo'
-    //   }
-    // ];
-    $scope.rsvpdGuests = {};
-    // $scope.rsvpDate = (function() {
-    //   new Date();
-    // })();
-
-    $scope.guestList = new Firebase("");
-    // $scope.guestList = $firebaseArray(ref);
-
-    $scope.addGuest = function() {
-      $scope.guestList.push({name: $scope.name, guestOf: $scope.guestOf, faveTurtle: $scope.faveTurtle });
-      $scope.name = "";
-      $scope.faveTurtle = "";
-      $scope.guestOf = "";
-    };
-
-
-    $scope.guestList.on('value', function(snapshot) {
-      $scope.$evalAsync(function() {
-        $scope.rsvpdGuests = snapshot.val();
-      });
-    });
 
     // Total Guests on list
     // $scope.getTotalGuests = function() {

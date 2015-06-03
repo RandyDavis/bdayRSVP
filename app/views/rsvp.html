@@ -29,34 +29,38 @@
           </p>
         </div><br>
         <h2 class="text-center rsvp">RSVP Your Child</h2>
-        <form class="form-horizontal rsvp">
+        <form name="rsvpForm" class="form-horizontal rsvp" novalidate>
           <div class="form-group text-center">
             <!-- Add child guest name -->
-            <label class="rsvpLabel" for="guestName" class="col-sm-2 control-label">Guest Name:</label>
+            <label class="rsvpLabel" for="guestName" class="col-sm-3 control-label">Guest Name:</label>
             <div class="col-sm-12">
-              <input ng-model="name" type="text" class="form-control text-center" id="guestName" placeholder="Name of child attending">
+              <input name="guestName" ng-model="name" type="text" class="form-control text-center" id="guestName" placeholder="Name of child attending" required>
+              <div class="error" ng-show="rsvpForm.guestName.$invalid && rsvpForm.guestName.$dirty">
+                <span ng-show="rsvpForm.guestName.$error.text">Please enter a guest name.</span>
+                
+              </div>
             </div>
           </div>
           <div class="form-group text-center">
             <!-- Select a favorite turtle -->
-            <label class="rsvpLabel" for="faveTurtle" class="col-sm-2 control-label">Favorite Ninja Turtle:</label>
+            <label class="rsvpLabel" for="faveTurtle" class="col-sm-4 control-label">Select Favorite Ninja Turtle:</label>
             <div class="col-sm-12">
               <select class="form-control" name="favTurt" ng-model="faveTurtle">
-                <option value="" selected>Select One</option>
+                <option value="">(Select One)</option>
                 <option value="Leonardo">Leonardo</option>
                 <option value="Raphael">Raphael</option>
                 <option value="Donatello">Donatello</option>
                 <option value="Michelangelo">Michelangelo</option>
               </select>
-              <!-- <select class="form-control" ng-model="faveTurtle">
-                <option ng-repeat="turtle in faveTurtle track by $index" value="{{ turtle }}" >{{ turtle }}</option>
+              <!-- <select class="form-control" ng-model="faveTurtle" ng-options="turtle.id as turtle.turtleName for turtle in faveTurtle">
+                <option value="" >Choose A Turtle</option>
               </select> -->
             </div>
           </div>
           <div class="form-group text-center">
             <!-- Specify who they are a guest of -->
-            <label class="rsvpLabel" for="guestOf" class="col-sm-2 control-label">Guest Of:</label>
-            <div class="col-sm-12">
+            <label class="rsvpLabel" for="guestOf" class="col-sm-4 control-label">Guest Of:</label>
+            <div class="col-sm-12" name="guestOf" >
               
               <label class="radio-inline">
                 <input ng-model="guestOf" type="radio" name="champGuest" id="champGuest" value="Champ"> Champ
@@ -68,11 +72,15 @@
                 <input ng-model="guestOf" type="radio" name="familyGuest" id="familyGuest" value="Family"> Family
               </label>
             </div>
+            <!-- <div class="error" ng-show="rsvpForm.guestOf.$invalid && rsvpForm.guestOf.$dirty">
+              <span ng-show="rsvpForm.guestOf.$error.text">Please choose either Champ or Atlas as your child's classmate or select family instead.</span>
+              
+            </div> -->
           </div>
           <div class="form-group">
             <!-- Submit the RSVP data -->
             <div class="col-sm-offset-2 col-sm-8 text-center">
-              <button type="submit" class="btn btn-default rsvp" ng-click="addGuest()">RVSP!</button>
+              <button type="submit" class="btn btn-default rsvp" ng-click="addGuest()" ng-disabled="rsvpForm.$invalid">RVSP!</button>
             </div>
           </div>
         </form>
@@ -95,7 +103,7 @@
             </tr>
           </table><br><br>
         </table>
-        <p ng-model="guestList" class="list">Total Guests: <span class="badge">{{ rsvpdGuests.guestList.length }}</span></p>
+        <!-- <p ng-model="guestList" class="list">Total Guests: <span class="badge">{{ rsvpdGuests.guestList.length }}</span></p> -->
       </div>
     </div>
 
