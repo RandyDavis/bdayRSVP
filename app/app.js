@@ -3,7 +3,7 @@ var rsvpApp = angular.module('rsvpApp', ['ngRoute', 'ngAnimate', 'firebase']);
 rsvpApp.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      controller: 'RsvpController',
+      controller: 'AuthController',
       templateUrl: 'app/views/landing.html'
     })
 
