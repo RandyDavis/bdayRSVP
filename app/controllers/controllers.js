@@ -115,7 +115,7 @@ rsvpApp
     //   new Date();
     // })();
 
-    $scope.guestList = new Firebase("https://champandatlasrsvp.firebaseio.com/GuestList");
+    $scope.guestList = new Firebase("");
     // $scope.guestList = $firebaseArray(ref);
 
     $scope.addGuest = function() {

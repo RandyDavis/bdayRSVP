@@ -110,8 +110,15 @@ a:hover, a:focus {
   color: #FFF;
 }
 
+.loginLabel {
+  width: 140px;
+  text-align: right;
+  margin-right: 10px;
+}
 
-
+#loginEmail, #loginPass {
+  width: 25%;
+}
 
 
 
